@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Website</title>
+    <link rel="stylesheet" href="proj2-style.css">
+</head>
+<body>
+    <div id="header">
+        
+        <div class="container">
+            <nav>
+                <h1>ARUBIII</h1>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#hobby">Hobbies</a></li>
+                    <li><a href="#Gallery">My Gallery</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Welcome to my <span>Personal Space!</span></p>
+                <h1>Hi there!</h1>
+                
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-column">
+                    <img src="picko1.jpeg">
+                </div>
+                <div class="about-column1">
+                    <a href="#header"><h1 class="title">About Me</h1></a>
+                    <p>Hi, I am Ralph Vincent G. De Castro, 18 years old I was born on March 05 2005.
+                    I am a student of University of Baguio studying with the 
+                    course of Information Technology. It was kinda hard but it is enjoyable.<br>
+                    <br>
+                    I am from La Union, currently studying here in baguio for a quality education. I studying IT because i feel like it is awesome to build or develop
+                    your own website with your own preference. I like to master html/css for the future.<br>
+                    <br>
+                    I like to listen to music all the time, whatever I do because music is one of my comfort zone. I also like playing
+                    online games because since I was a little child I like playing games whether it is outdoor or indoor. I took this course because
+                    others say that this is an in demand course, but that wasn't my only reason why I chose this course. IT captivated me, even if it is hard
+                    there's a fulfillment when you finish that task that's why I say IT is super interesting.
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                    </div>
+                    <div class="tab-content active-tab" id="Skills">
+                        <ul>
+                            <li><span>HTML</span><br>Making simple website using HTML</li>
+                            <li><span>CSS</span><br>Designing simple website using CSS</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="Education">
+                        <ul>
+                            <li><span>2024</span><br>Curently studying at University of Baguio</li>
+                            <li><span>2024</span><br>Have a knowledge building a simple website</li>
+                        </ul>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-content");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab")
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+
+    <div id="hobby">
+        <div class="container">
+            <a href="#header"><h1 class="title1">My Hobbies</h1></a>
+            <div class="hobby-list">
+                <div>
+                   <img src="games.jpg" alt="games">
+                    <h2>Playing Online Games</h2>
+                    <p>Ever since I was young, I play online games and 
+                        it's been my hobby lately.
+                    </p>                   
+                </div>
+                <div>
+                    <img src="music.jpg" alt="music">
+                    <h2>Listening to Music</h2>
+                    <p>Music calms my mind whenever I feel discomfort,
+                        music makes me happy.
+                    </p>           
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <div id="Gallery">
+        <div class="container">
+             <a href="#header"><h1 class="title1">My Gallery</h1></a>
+            <div class="pictures">
+                <div class="pics">
+                    <img src="img_13.webp">
+                    <img src="img_20.jpg">
+                    <img src="img_3.jpeg">
+                    <img src="img_2.webp">
+                    <img src="img_5.jpg">
+                    <img src="img_12.jpg">
+                </div>
+              
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <a href="#header"><h1 class="title1">Contact Me</h1></a>
+                    <p><i class="fa-solid fa-envelope"></i>rvdecastro05@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>09318471343</p>
+                    <div class="social-icons">
+                        <a href="https://web.facebook.com/ralphvincent.decastro.90"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/luckymeeee555/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://open.spotify.com/user/317yaickv3z3sqvboxduqrmoplnu?si=KrgK6auzSZeDkhUoHLwSgQ"><i class="fa-brands fa-spotify"></i></a>
+                    </div>
+                    
+                </div>
+                <div class="contact-right">
+                    <form action="https://formspree.io/f/mayrkapk" method="POST">
+                        <input type="text" name="Name" 
+                        placeholder="Type Your Name" required>
+                        <input type="email" placeholder="Type Your Email"
+                        required>
+                        <textarea name="Message" placeholder="Type your Message"></textarea>
+                        <button type="submit" class="btn btn2">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/a4beb52d2b.js" crossorigin="anonymous"></script>
+</body>
+
+<footer class="footer">
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
+
+</html>
